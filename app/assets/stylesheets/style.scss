@@ -794,7 +794,7 @@ ul.address-widget li i {
     top: calc(50vh - 150px);}
  
     .heroslider.owl-carousel .owl-nav button.owl-prev,.heroslider.owl-carousel .owl-nav button.owl-next {
-        background-image: url(../images/chevron-right.png) !important;
+        background-image: image-url('chevron-right.png') !important;
         width: 50px;
         background: rgba(0, 0, 0, 0.5);
         height: 50px;
@@ -809,7 +809,7 @@ ul.address-widget li i {
     .heroslider.owl-carousel .owl-nav button.owl-next {transform: rotate(0);
         right: 0;}
     .heroslider.owl-theme .owl-nav [class*=owl-]:hover {
-        background-image: url(../images/chevron-right.png) !important;
+        background-color: image-url('chevron-right.png')  !important;
         color: transparent;
         text-decoration: none;
     }
@@ -1613,7 +1613,7 @@ ul.address-widget li i {
     color: #ff9700;
   }
   .offwrap {
-    cursor: url(../images/close.png), auto;
+    cursor: asset-url('close.png');
     width: 100%;
     left: 100%;
     transition: all 0.8s ease-out 0s;
@@ -1654,7 +1654,7 @@ ul.address-widget li i {
     top: 0;
 }
 .rs-breadcrumbs.img1 {
-    background: url(../images/about-us-banner.jpg) ;
+  background-image: image-url('about-us-banner.jpg');
 }
 .rs-breadcrumbs {
     background-repeat: no-repeat !important;
@@ -1762,7 +1762,7 @@ ul.address-widget li i {
         position: relative;
     }
     .bg12 {
-        background-image: url(../images/about-bg2.jpg);
+        background-image: image-url('about-bg2.jpg');
         background-repeat: no-repeat;
         background-position: top center;
     }
@@ -1802,7 +1802,7 @@ ul.address-widget li i {
         padding-top: 50px;
     }
     .bg6 {
-        background-image: url(../images/testi-bg.png);
+        background-image: image-url('testi-bg.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -1840,14 +1840,16 @@ ul.address-widget li i {
         margin-top: 45px;
     }
     .custom-image {
-        background-image: url(../images/services-bg.jpeg);
+        background-image: image-url('services-bg.jpeg');
         background-size: cover;
     }
     .d-flex-center{ display: flex;
         flex-direction: column;
         justify-content: center;}
         
-    .contact{background: url(../images/contact-us.png);}
+    .contact {
+      background-image: image-url('contact-us.png');
+    }
     .pr-40 {
       padding-right: 40px;
   }

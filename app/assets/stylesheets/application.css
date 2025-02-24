@@ -10,7 +10,7 @@
  @import "owl.theme.default.min";
  @import "responsive";
  @import "rsmenu-main";
- @import "style";
+ @import "style.scss";
  @import "../../assets/video/"
 
  
