@@ -7,7 +7,8 @@ $(document).ready(function() {
     margin: 10,
     autoplay: true,
     autoplayTimeout:9000,
-    autoplayHoverPause: true
+    autoplayHoverPause: true,
+    nav: true,
   });
   $('.play').on('click', function() {
     owl.trigger('play.owl.autoplay', [1000])
@@ -48,6 +49,20 @@ $(document).ready(function() {
     owl.trigger('stop.owl.autoplay')
   })
 //
+var owl = $('.testimonial');
+owl.owlCarousel({
+  items: 1,
+  loop: true,
+  margin: 10,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  // animateOut: "fadeOutRight",
+  animateIn: "fadeInRight",
+  animSpeed: 600,
+});
+
+//
 var owl = $('.recent-work');
   owl.owlCarousel({
     items:4,
@@ -78,6 +93,39 @@ var owl = $('.recent-work');
     owl.trigger('stop.owl.autoplay')
   })
 
+    // sticky menu
+    var header = $('.menu-sticky');
+    var win = $(window);
+
+    win.on('scroll', function() {
+       var scroll = win.scrollTop();
+       if (scroll < 1) {
+           header.removeClass("sticky");
+       } else {
+           header.addClass("sticky");
+       }
+
+        $("section").each(function() {
+        var elementTop = $(this).offset().top - $('#rs-header').outerHeight();
+            if(scroll >= elementTop) {
+                $(this).addClass('loaded');
+            }
+        });
+    });
+// scrollTop init	
+var totop = $('#scrollUp');    
+win.on('scroll', function() {
+    if (win.scrollTop() > 150) {
+        totop.fadeIn();
+    } else {
+        totop.fadeOut();
+    }
+});
+totop.on('click', function() {
+    $("html,body").animate({
+        scrollTop: 0
+    }, 500)
+});
 
   // Menu
    // onepage nav
@@ -146,6 +194,11 @@ $('#number2').jQuerySimpleCounter({end: 215,duration: 2000});
 $('#number3').jQuerySimpleCounter({end: 25,duration: 2000});
 $('#number4').jQuerySimpleCounter({end: 70,duration: 2000});
 
+
+$('#Projects_completed').jQuerySimpleCounter({end: 45,duration: 2000});
+$('#Experienced_people').jQuerySimpleCounter({end: 20,duration: 2000});
+$('#experience').jQuerySimpleCounter({end:10,duration: 2000});
+$('#awards').jQuerySimpleCounter({end: 12,duration: 2000});
 /******** Mobile Menu Start ********/
     
 $('.mobile-navbar-menu a').each(function(){

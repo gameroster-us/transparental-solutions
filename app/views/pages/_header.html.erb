@@ -7,9 +7,9 @@
         <div class="row-table">
           <div class="col-cell header-logo">                                  
             <div class="logo-area">
-              <a href="#">
+              <%= link_to root_path do %>
                 <%= image_tag("logo.png") %> 
-              </a>
+              <% end %>
             </div>
           </div>
           <div class="col-cell">
@@ -24,7 +24,7 @@
                       <%= link_to "About Us" , about_page_path, remote: false %>
                     </li>
                     <li class="menu-item-has-children service <%= 'current-menu-item' if params[:action] == 'service' %>">
-                      <a href="">Services</a>
+                      <a href="<%= service_page_path %>">Services</a>
                       <ul class="sub-menu">
                         <li><a href="#">Custom Software Solutions</a></li>
                         <li><a href="#">IT Staffing & Services</a></li>
