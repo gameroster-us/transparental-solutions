@@ -1,10 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-</head>
-<body>
-  <h1>Welcome, <%= @user.email %>!</h1>
-  <p>Thank you for signing up. We're glad to have you.</p>
-</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title> Welcome Email</title>
+   </head>
+   <body bgcolor="#fff" class="body" style="font-family: Arial, Helvetica, sans-serif; margin:0; display:block; background:#ffffff; -webkit-text-size-adjust:none">
+      <table align="center" cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" bgcolor="#fff" class="" valign="top" width="100%">
+              <center class="">
+                <table cellpadding="0" cellspacing="0" class="w320" style="margin: 0 auto;" width="600">
+                  <tbody>
+                    <tr>
+                      <td align="center" class="" valign="top">
+                        <table cellpadding="0" cellspacing="0" style="margin: 0 auto;" width="100%">
+                        </table>
+                        <table bgcolor="#fff" cellpadding="0" cellspacing="0" class="" style="margin: 0 auto; width: 100%; margin-top: 100px;">
+                          <tbody style="margin-top: 15px; text-align: center;">
+                              <tr class="">
+                                <td class="">
+                                  <img alt="robot picture" class="" height="155" src="https://transparentalsolutions.com/assets/logo-1.png" style="width: 200px;
+                                    height: auto;">
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <td class="headline" >
+                                  <h2>
+                                    Welcome, <%= @user.first_name.present? && @user.last_name.present? ? "#{@user.first_name} #{@user.last_name}" : @user.email %>!
+                                  </h2>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <center class="">
+                                    <table cellpadding="0" cellspacing="0" class="" style="margin: 0 auto;" width="75%">
+                                      <tbody class="">
+                                        <tr class="">
+                                          <td class="" style="color:#444; font-weight: 400;">
+                                            <p style="
+                                              font-size: 20px;text-align: center;
+                                              font-weight: 800;
+                                              ">Thank you for signing up! We're thrilled to have you on board.</p>
+                                            <p style="text-align: center;">Explore our features and make the most of your experience. If you have any questions, feel free to reach out.</p>
+                                            <br>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </center>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="">
+                                  <div class="">
+                                    <a href="https://transparentalsolutions.com/" style="display: inline-block; padding: 10px 20px; background-color: #ff9700; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">Visit Our Website</a>
+                                  </div>
+                                  <br>
+                                </td>
+                              </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </center>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   </body>
 </html>
