@@ -31,7 +31,7 @@
             <% if current_user.profile_photo.attached? %>
               <%= image_tag(current_user.profile_photo, alt: "Profile Photo", class: "profile-image") if current_user.profile_photo.attached? %>
             <% else %>
-              <%= image_tag('placeholder.png') %>
+              <%= image_tag('placeholder.png', alt: "placeholder") %>
             <% end %>
           </div>
         </div>

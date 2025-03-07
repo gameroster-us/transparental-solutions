@@ -1,13 +1,13 @@
-<div class="full-width-header">
+<div class="full-width-header mb-4">
 	<header id="rs-header" class="rs-header style2 header-transparent">
 		<div class="menu-area menu-sticky">
 			<div class="container custom">
 				<div class="row-table">
 					<div class="col-cell header-logo">                                  
 						<div class="logo-area">
-							<a href="#">
-								<%= image_tag("logo.png", alt:"logo") %>  
-							</a>
+							<%= link_to admins_path do %>
+								<%= image_tag("logo.png", alt: "logo") %> 
+							<% end %>
 						</div>
 					</div>
 					<div class="col-cell">
@@ -15,6 +15,12 @@
 							<div class="main-menu">
 								<nav class="rs-menu hidden-md">
 									<ul class="nav-menu">
+										<li class="<%='current-menu-item' if params[:action] == 'index' %>">
+                      <%= link_to "Users" , admins_path %>
+                    </li>
+                    <li class="<%='current-menu-item' if params[:action] == 'inquiries' %>">
+                      <%= link_to "Inquiries" , admin_inquiries_path %>
+                    </li>
 										<% if admin_signed_in? %>
 											<li class="">
 												<%= link_to "Log Out" , destroy_admin_session_path, method: :delete %>

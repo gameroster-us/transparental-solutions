@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/job_posting', to: 'pages#job_posting', as: 'job_posting_page'
   get '/contact_us', to: 'pages#contact_us', as: 'contact_us_page'
   get 'users/profile', to: 'users#profile', as: 'user_profile'
+  get 'admins/inquiries', to: 'admins#inquiries', as: 'admin_inquiries'
   resources :users
   resources :admins
   resources :inquiries

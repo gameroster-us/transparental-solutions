@@ -45,40 +45,39 @@
             towards their passionate job.
           </p>
           <p class="margin-0">We work with top Salesforce Consulting firms and designers in the USA to
-            effortlessly convey commitment, fulfilling customers' cloud computing and Salesforce
+            effortlessly convey commitment, fulfilling customer's cloud computing and Salesforce
             needs on a regular basis.
             Connect with us right away for more info.
           </p>
 		    </div>
 		    <div class="contact-wrap">
           <div id="form-messages"></div>
-          <form id="contact-form1" class="contact-form" action="/create_inquiry" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="fBr7G8Rhcd4jaXsjIbBZpinVH4P-zST1H8iE7CYwcmXwwpJJF-FQFUyLOtY7UoeBW2hjLuOapuqRK9GdBUh-hg" autocomplete="off" />
+          <%= form_with(model: @inquiry, url: create_inquiry_path, local: true, html: { id: "contact-form", class: "contact-form" }) do |f| %>
 		        <fieldset>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <input class="from-control" placeholder="Name" required="required" type="text" name="inquiry[name]" id="inquiry_name" />
+                  <%= f.text_field :name, class: "from-control", placeholder: "Name", required: true %>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <input class="from-control" placeholder="E-Mail" required="required" type="email" name="inquiry[email]" id="inquiry_email" />
+                  <%= f.email_field :email, class: "from-control", placeholder: "E-Mail", required: true %>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <input class="from-control" placeholder="Phone Number" required="required" type="text" name="inquiry[phone_number]" id="inquiry_phone_number" />
+                  <%= f.text_field :phone_number, class: "from-control", placeholder: "Phone Number", required: true %>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <input class="from-control" placeholder="Your Website" required="required" type="text" name="inquiry[website]" id="inquiry_website" />
+                  <%= f.text_field :website, class: "from-control", placeholder: "Your Website", required: true %>
                 </div>
                 <div class="col-lg-12 mb-20">
-                  <textarea class="from-control" placeholder="Your message Here" required="required" name="inquiry[message]" id="inquiry_message" rows="5" cols="6">
-                  </textarea>
+                  <%= f.text_area :message, class: "from-control", placeholder: "Your message Here", required: true %>
 			          </div>
 		          </div>
 		          <div class="btn-part">
 			          <div class="form-group mb-20">
-                  <input type="submit" name="commit" value="Submit Now" class="readon consultant discover" data-disable-with="Submit Now" />
+                  <%= f.submit "Submit Now", class: "readon consultant discover" %>
                 </div>
               </div>
 		        </fieldset>
-          </form>
+          <% end %>
         </div>
 	    </div>
 	  </div>
@@ -90,10 +89,10 @@
           <div class="col-lg-4 col-md-12 col-sm-6 md-mb-30">
             <div class="contact-item">
               <div class="contact-icon">
-                <%= image_tag("map.png")%>
+                <%= image_tag("map.png", alt: "map")%>
               </div>
               <div class="content-text">
-                <h2 class="title"><a href="#">USA office</a></h2>
+                <h2 class="title"><a>USA office</a></h2>
                 <p class="services-txt">38251 Remington park , Farmington Hills,MI,48331</p>
               </div>
             </div>
@@ -101,22 +100,22 @@
           <div class="col-lg-4 col-md-12 col-sm-6 xs-mb-30">
             <div class="contact-item">
               <div class="contact-icon">
-                <%= image_tag("email.png")%>
+                <%= image_tag("email.png", alt: "email")%>
               </div>
               <div class="content-text">
-                <h2 class="title"><a href="#">Email us</a></h2>
-                <a href="mailto: info@transparentalsolutions.com" class="text-break"> info@transparentalsolutions.com</a>
+                <h2 class="title"><a>Email us</a></h2>
+                <%= link_to "mailto:info@transparentalsolutions.com", class: "text-break" do %> info@transparentalsolutions.com <% end %>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 col-sm-6">
             <div class="contact-item">
               <div class="contact-icon">
-                <%= image_tag("call.png")%>
+                <%= image_tag("call.png", alt: "call")%>
               </div>
               <div class="content-text">
-                <h2 class="title"><a href="#">Call us</a></h2>
-                <a href="tel:320-412-3138">320-412-3138</a>
+                <h2 class="title"><a>Call us</a></h2>
+                <%= link_to "tel:320-412-3138" do %> 320-412-3138 <% end %>
               </div>
             </div>
           </div>

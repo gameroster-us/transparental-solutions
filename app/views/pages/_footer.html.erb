@@ -4,35 +4,45 @@
       <div class="row">
         <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
           <div class="footer-logo mb-10">
-            <a href="#"><%= image_tag("logo.png") %></a>
+            <%= link_to root_path do %>
+              <%= image_tag("logo.png", alt: "logo") %> 
+            <% end %>
           </div>
           <div class="textwidget white-color pb-40"><p>Transparental Solutions LLC one who provides the most sophisticated and comprehensive end-to-end Business Requirements and Solutions to our Customers, and forms an integral link in the global supply chain.</p>
           </div>
           <ul class="footer-social md-mb-30">  
             <li> 
-              <a href="https://www.facebook.com/people/Transparental-Solutions-LLC/100076633352325/?mibextid=uzlsIk" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
+              <%= link_to 'https://www.facebook.com/people/Transparental-Solutions-LLC/100076633352325/?mibextid=uzlsIk', target: "_blank" do %>
+                <span><i class="fa fa-facebook"></i></span>
+              <% end %>
             </li>
+            <!-- <li> 
+              <%= link_to '#', target: "_blank" do %>
+                <span><i class="fa fa-twitter"></i>
+              <% end %>
+            </li> -->
             <li> 
-              <a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
+              <%= link_to 'https://www.linkedin.com/company/transparental-solutionsllc/?viewAsMember=true', target: "_blank" do %>
+                <span><i class="fa fa-linkedin"></i></span>
+              <% end %>
             </li>
-            <li> 
-              <a href=" https://www.linkedin.com/company/transparental-solutionsllc/?viewAsMember=true" target="_blank"><span><i class="fa fa-linkedin"></i></span></a> 
-            </li>
-            <li> 
-              <a href="#" target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
-            </li>
+            <!-- <li> 
+              <%= link_to '#', target: "_blank" do %>
+                <span><i class="fa fa-instagram"></i></span>
+              <% end %>
+            </li> -->
           </ul>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
-          <h3 class="footer-title">Our Services</h3>
+          <div class="footer-title">Our Services</div>
           <ul class="site-map">
-            <li><a href="#">Custom Software Solutions</a></li>
-            <li><a href="#">IT Staffing &amp; Services</a></li>
-            <li><a href="#">Managed IT Services</a></li>
+            <li><%= link_to "service#custom-software-solutions" do %> Custom Software Solutions <% end %></li>
+            <li><%= link_to "service#it-staffing-and-services" do %> IT Staffing & Services <% end %></li>
+            <li><%= link_to "service#managed-it-services" do %> Managed IT Services <% end %></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
-          <h3 class="footer-title">Contact Info</h3>
+          <div class="footer-title">Contact Info</div>
           <ul class="address-widget">
             <li>
               <i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +70,7 @@
                 </svg>
               </i>
               <div class="desc ml-10">
-                <a href="tel:320-412-3138">320-412-3138</a>
+                <%= link_to "tel:320-412-3138" do %> 320-412-3138 <% end %>
               </div>
             </li>
             <li>
@@ -80,7 +90,7 @@
                 </svg>
               </i>
               <div class="desc ml-10">
-                <a href="mailto:info@transparentalsolutions.com">info@transparentalsolutions.com</a>
+                <%= link_to "mailto:info@transparentalsolutions.com", class: "hash" do %> info@transparentalsolutions.com <% end %>
               </div>
             </li>
             <li>
@@ -96,11 +106,11 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12">
-          <h3 class="footer-title">Newsletter</h3>
+          <div class="footer-title">Newsletter</div>
           <p class="widget-desc white-color mb-3">Stay up to update with our latest news and products.</p>
           <!-- <p><a style="color:#FFF" href="https://h1bgrader.com/h1b-sponsors/cis-technologies-inc-d0g9egdvko/" title="H1B Sponsers" alt: "H1B Sponsers" target="_blank">H1B Sponsers</a></p> -->
-          <p class="mb-3"><a style="color:#FFF" href="#" title="My Visa Jobs" alt: "My Visa Jobs" target="_blank">MyvisaJobs</a></p>
-          <p class="mb-3"><a style="color:#FFF" href="#" title="Glassdoor" alt: "Glassdoor" target="_blank">Glassdoor</a></p>
+          <p class="mb-3"><a style="color:#FFF" title="My Visa Jobs" alt: "My Visa Jobs" target="_blank">MyvisaJobs</a></p>
+          <p class="mb-3"><a style="color:#FFF" title="Glassdoor" alt: "Glassdoor" target="_blank">Glassdoor</a></p>
         </div>
       </div>
     </div>

@@ -1,0 +1,21 @@
+<%= render 'pages/admin_nav' %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Website</th>
+      <th class="text-wrap" style="width: 15rem;">Message</th>
+    </thead>
+    <% @inquiries.each do | inquery | %>
+      <tbody>
+        <td><%= inquery.name %></td>
+        <td><%= inquery.email %></td>
+        <td><%= inquery.phone_number %></td>
+        <td><%= inquery.website %></td>
+        <td><%= inquery.message %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>

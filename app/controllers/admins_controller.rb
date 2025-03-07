@@ -4,4 +4,9 @@ class AdminsController < ApplicationController
   def index
     @users = User.all
   end
+
+  def inquiries
+    @inquiries = Inquiry.all
+  end
+  
 end
