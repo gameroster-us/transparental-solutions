@@ -56,19 +56,59 @@
 		        <fieldset>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <%= f.text_field :name, class: "from-control", placeholder: "Name", required: true %>
+                  <% invalid = @inquiry.errors.include?(:name) %>
+                  <%= f.text_field :name, class: "form-control #{'is-invalid' if invalid}", placeholder: "Name" %>
+                  <% if invalid %>
+                    <div class="invalid-feedback d-block">
+                      <% @inquiry.errors.full_messages_for(:name).each do |error_message| %>
+                        <%= error_message %>.
+                      <% end %>
+                    </div>
+                  <% end %>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <%= f.email_field :email, class: "from-control", placeholder: "E-Mail", required: true %>
+                  <% invalid = @inquiry.errors.include?(:email) %>
+                  <%= f.email_field :email, class: "form-control #{'is-invalid' if invalid}", placeholder: "E-Mail" %>
+                  <% if invalid %>
+                    <div class="invalid-feedback d-block">
+                      <% @inquiry.errors.full_messages_for(:email).each do |error_message| %>
+                        <%= error_message %>.
+                      <% end %>
+                    </div>
+                  <% end %>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <%= f.text_field :phone_number, class: "from-control", placeholder: "Phone Number", required: true %>
+                  <% invalid = @inquiry.errors.include?(:phone_number) %>
+                  <%= f.text_field :phone_number, class: "form-control #{'is-invalid' if invalid}", placeholder: "Phone Number" %>
+                  <% if invalid %>
+                    <div class="invalid-feedback d-block">
+                      <% @inquiry.errors.full_messages_for(:phone_number).each do |error_message| %>
+                        <%= error_message %>.
+                      <% end %>
+                    </div>
+                  <% end %>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-10">
-                  <%= f.text_field :website, class: "from-control", placeholder: "Your Website", required: true %>
+                  <% invalid = @inquiry.errors.include?(:website) %>
+                  <%= f.text_field :website, class: "form-control #{'is-invalid' if invalid}", placeholder: "Your Website" %>
+                  <% if invalid %>
+                    <div class="invalid-feedback d-block">
+                      <% @inquiry.errors.full_messages_for(:website).each do |error_message| %>
+                        <%= error_message %>.
+                      <% end %>
+                    </div>
+                  <% end %>
                 </div>
                 <div class="col-lg-12 mb-20">
-                  <%= f.text_area :message, class: "from-control", placeholder: "Your message Here", required: true %>
+                  <% invalid = @inquiry.errors.include?(:message) %>
+                  <%= f.text_area :message, class: "form-control #{'is-invalid' if invalid}", placeholder: "Your message Here" %>
+                  <% if invalid %>
+                    <div class="invalid-feedback d-block">
+                      <% @inquiry.errors.full_messages_for(:message).each do |error_message| %>
+                        <%= error_message %>.
+                      <% end %>
+                    </div>
+                  <% end %>
 			          </div>
 		          </div>
 		          <div class="btn-part">
