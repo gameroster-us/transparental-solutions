@@ -1,7 +1,24 @@
-<% content_for :head do %>
-  <meta name="title" content="Jobs"/>
-  <meta name="description" content="Join Transparental Solutions. We are seeking a highly motivated individual."/>
+<% content_for :title do %>Current Job Openings - Transparental Solutions<% end %>
+<% content_for :meta_description do %>Discover the latest job openings at Transparental Solutions. We’re looking for talented IT experts to contribute to our innovative solutions and services.<% end %>
+	
+<% content_for :meta_tags do %>
+	<meta property="og:title" content="Current Job Openings - Transparental Solutions">
+	<meta property="og:description" content="Discover the latest job openings at Transparental Solutions. We’re looking for talented IT experts to contribute to our innovative solutions and services.">
+	<meta property="og:image" content="<%= image_url("job.jpg")%>">
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="663" />
+	<meta property="og:image:type" content="image/jpg" />
+	<meta property="og:url" content="<%= request.original_url %>">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Transparental Solutions">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Current Job Openings - Transparental Solutions">
+	<meta name="twitter:description" content="Discover the latest job openings at Transparental Solutions. We’re looking for talented IT experts to contribute to our innovative solutions and services.">
+	<meta name="twitter:image" content="<%= image_url("job.jpg")%>">
 <% end %>
+
 <div class="offwrap"></div>
 <section>
 	<!-- Main content Start -->

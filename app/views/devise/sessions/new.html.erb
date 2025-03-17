@@ -1,4 +1,25 @@
-<h2 align="center">Log in</h2>
+<% content_for :title do %>Sign In to Your Account - Transparental Solutions<% end %>
+<% content_for :meta_description do %>Access your Transparental Solutions account to manage your services, job applications, and more. Stay connected and in control of your IT solutions.<% end %>
+  
+<% content_for :meta_tags do %>
+  <meta property="og:title" content="Sign In to Your Account - Transparental Solutions">
+  <meta property="og:description" content="Access your Transparental Solutions account to manage your services, job applications, and more. Stay connected and in control of your IT solutions.">
+  <meta property="og:image" content="<%= image_url("logo.png")%>">
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="663" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Transparental Solutions">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sign In to Your Account - Transparental Solutions">
+  <meta name="twitter:description" content="Access your Transparental Solutions account to manage your services, job applications, and more. Stay connected and in control of your IT solutions.">
+  <meta name="twitter:image" content="<%= image_url("logo.png")%>">
+<% end %>
+
+<div align="center" class="h4-heading">Log in</div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), id: "new_user") do |f| %>
   <div class="mb-3">
     <%= f.label :email , class: "form-label" %><br />

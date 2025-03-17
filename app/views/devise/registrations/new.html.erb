@@ -1,5 +1,25 @@
+<% content_for :title do %>Create an Account  - Transparental Solutions<% end %>
+<% content_for :meta_description do %>Sign up for Transparental Solutions to access exclusive IT services and job opportunities. Join our community and unlock latest technology solutions.<% end %>
+  
+<% content_for :meta_tags do %>
+  <meta property="og:title" content="Create an Account  - Transparental Solutions">
+  <meta property="og:description" content="Sign up for Transparental Solutions to access exclusive IT services and job opportunities. Join our community and unlock latest technology solutions.">
+  <meta property="og:image" content="<%= image_url("logo.png")%>">
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="663" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Transparental Solutions">
 
-<h2 align="center">Sign up</h2>
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Create an Account  - Transparental Solutions">
+  <meta name="twitter:description" content="Sign up for Transparental Solutions to access exclusive IT services and job opportunities. Join our community and unlock latest technology solutions.">
+  <meta name="twitter:image" content="<%= image_url("logo.png")%>">
+<% end %>
+
+<div align="center" class="h4-heading">Sign up</div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-signup" }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="mb-3">

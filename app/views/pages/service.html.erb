@@ -1,7 +1,24 @@
-<% content_for :head do %>
-  <meta name="title" content="Services | Transparental Solutions - IT Services and Consulting"/>
-  <meta name="description" content="Transparental Solutions offers custom software solutions, IT staffing services, and managed IT services to help businesses thrive with innovative technology."/>
+<% content_for :title do %>Comprehensive IT & Software Services For Modern Business - Transparental Solutions<% end %>
+<% content_for :meta_description do %>Transparental Solutions empowers organizations with flexible, scalable, and reliable technology services that accelerate growth and drive operational success.<% end %>
+  
+<% content_for :meta_tags do %>
+  <meta property="og:title" content="Comprehensive IT & Software Services For Modern Business - Transparental Solutions">
+  <meta property="og:description" content="Transparental Solutions empowers organizations with flexible, scalable, and reliable technology services that accelerate growth and drive operational success.">
+  <meta property="og:image" content="<%= image_url("services-bg.jpeg")%>">
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="663" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Transparental Solutions">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comprehensive IT & Software Services For Modern Business - Transparental Solutions">
+  <meta name="twitter:description" content="Transparental Solutions empowers organizations with flexible, scalable, and reliable technology services that accelerate growth and drive operational success.">
+  <meta name="twitter:image" content="<%= image_url("services-bg.jpeg")%>">
 <% end %>
+
 <div class="offwrap"></div>
 <section>
   <!-- Main content Start -->

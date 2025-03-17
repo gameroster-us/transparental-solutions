@@ -1,7 +1,24 @@
-<% content_for :head do %>
-  <meta name="title" content="About | Transparental Solutions - IT Services and Consulting"/>
-  <meta name="description" content="Transparental Solutions works in offering Custom Software Solutions, IT Staffing & Services, and Managed IT Services."/>
+<% content_for :title do %>Trusted Partner in IT & Custom Software Development - Transparental Solutions<% end %>
+<% content_for :meta_description do %>This version highlights transformation and strategic services, focusing on how Transparental Solutions helps businesses grow with tailored IT and software offerings.<% end %>
+  
+<% content_for :meta_tags do %>
+  <meta property="og:title" content="Trusted Partner in IT & Custom Software Development - Transparental Solutions">
+  <meta property="og:description" content="This version highlights transformation and strategic services, focusing on how Transparental Solutions helps businesses grow with tailored IT and software offerings.">
+  <meta property="og:image" content="<%= image_url("about_us.png")%>">
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="663" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Transparental Solutions">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trusted Partner in IT & Custom Software Development - Transparental Solutions">
+  <meta name="twitter:description" content="This version highlights transformation and strategic services, focusing on how Transparental Solutions helps businesses grow with tailored IT and software offerings.">
+  <meta name="twitter:image" content="<%= image_url("about_us.png")%>">
 <% end %>
+
 <div class="offwrap"></div>
 <section>
   <!-- Main content Start -->
@@ -76,7 +93,7 @@
               <%= image_tag("1.png", alt: "logo") %>
             </div>
             <div class="services-text">
-              <h3 class="title"><a>Expert peoples</a></h3>
+              <div class="title"><a>Expert peoples</a></div>
             </div>
           </div>
         </div>
@@ -86,7 +103,7 @@
               <%= image_tag("2.png", alt: "logo") %>
             </div>
             <div class="services-text">
-              <h3 class="title"><a>Big experience</a></h3>
+              <div class="title"><a>Big experience</a></div>
             </div>
           </div>
         </div>
@@ -96,7 +113,7 @@
               <%= image_tag("3.png", alt: "logo") %>
             </div>
             <div class="services-text">
-              <h3 class="title"><a>Committed to quality</a></h3>
+              <div class="title"><a>Committed to quality</a></div>
             </div>
           </div>
         </div>
@@ -144,7 +161,7 @@
               </div>
             </div>
             <div class="content-part">
-              <h5 class="title">Projects completed for our respected clients.</h5>
+              <div class="title">Projects completed for our respected clients.</div>
             </div>
           </div>
         </div>
@@ -160,7 +177,7 @@
               </div>
             </div>
             <div class="content-part">
-              <h5 class="title">Experienced people serving to clients.</h5>
+              <div class="title">Experienced people serving to clients.</div>
             </div>
           </div>
         </div>
@@ -176,7 +193,7 @@
               </div>
             </div>
             <div class="content-part">
-              <h5 class="title">Years experience in business &amp; consulting.</h5>
+              <div class="title">Years experience in business &amp; consulting.</div>
             </div>
           </div>
         </div>
@@ -192,7 +209,7 @@
               </div>
             </div>
             <div class="content-part">
-              <h5 class="title">Business &amp; consulting awards won over world.</h5>
+              <div class="title">Business &amp; consulting awards won over world.</div>
             </div>
           </div>
         </div>

@@ -1,7 +1,24 @@
-<% content_for :head do %>
-  <meta name="title" content="Contact Us | Transparental Solutions - IT Services and Consulting"/>
-  <meta name="description" content="Contact Us for any solutions regarding custom software solutions, IT staffing services, and managed IT services to help businesses thrive with innovative technology."/>
+<% content_for :title do %>Contact Us For Start Your IT Transformation - Transparental Solutions<% end %>
+<% content_for :meta_description do %>Connect with Transparental Solutions for custom IT services and software solutions. Let’s discuss how our technology expertise can drive your business forward.<% end %>
+  
+<% content_for :meta_tags do %>
+  <meta property="og:title" content="Contact Us For Start Your IT Transformation - Transparental Solutions">
+  <meta property="og:description" content="Connect with Transparental Solutions for custom IT services and software solutions. Let’s discuss how our technology expertise can drive your business forward.">
+  <meta property="og:image" content="<%= image_url("contact-us.png")%>">
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="663" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Transparental Solutions">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us For Start Your IT Transformation - Transparental Solutions">
+  <meta name="twitter:description" content="Connect with Transparental Solutions for custom IT services and software solutions. Let’s discuss how our technology expertise can drive your business forward.">
+  <meta name="twitter:image" content="<%= image_url("contact-us.png")%>">
 <% end %>
+
 <div class="offwrap"></div>
 <section>
 	<!-- Main content Start -->

@@ -1,7 +1,24 @@
-<% content_for :head do %>
-  <meta name="title" content="Innovative Tech Solutions | Transparental Solutions - IT Services and Consulting"/>
-  <meta name="description" content="Transparental Solutions is a leading IT company providing innovative technology solutions, software development, and consulting services to empower businesses with digital transformation and growth."/>
+<% content_for :title do %>Expert IT Services & Custom Software Solutions For Business Growth - Transparental Solutions<% end %>
+<% content_for :meta_description do %>Transparental Solutions offers IT staffing, managed services, and custom software development. Our solutions are designed to empower businesses with innovative technology.<% end %>
+
+<% content_for :meta_tags do %>
+  <meta property="og:title" content="Expert IT Services & Custom Software Solutions For Business Growth - Transparental Solutions">
+  <meta property="og:description" content="Transparental Solutions offers IT staffing, managed services, and custom software development. Our solutions are designed to empower businesses with innovative technology.">
+  <meta property="og:image" content="<%= image_url("it_staffing_services.jpg")%>">
+  <meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="663" />
+	<meta property="og:image:type" content="image/jpg" />
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Transparental Solutions">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Expert IT Services & Custom Software Solutions For Business Growth - Transparental Solutions">
+  <meta name="twitter:description" content="Transparental Solutions offers IT staffing, managed services, and custom software development. Our solutions are designed to empower businesses with innovative technology.">
+  <meta name="twitter:image" content="<%= image_url("it_staffing_services.jpg")%>">
 <% end %>
+
 <div class="offwrap"></div>
 <section>
   <!-- Main content Start -->
@@ -30,7 +47,7 @@
     <div class="sec-title2 d-flex align-items-center mb-60 md-mb-40">
       <div class="first-half">
         <div class="sub-text">What We Offer</div>
-        <h2 class="title mb-0 md-pb-20">The best solutions for your business - <span>what we do.</span></h2>
+        <h1 class="title mb-0 md-pb-20">The best solutions for your business - <span>what we do.</span></h1>
       </div>
       <div class="last-half">
         <p class="desc mb-0 pl-20 md-pl-15">25+ years experience in business and finance consulting, IT solutions, and working with 5k+ clients over the world. Creation timelines for the digital consulting business theme 2021.</p>
@@ -42,7 +59,7 @@
           <%= image_tag("custom_software_solutions.jpg", alt: "custom software solutions")%>
         </div>
         <div class="content-part">
-          <h3 class="title">Custom Software Solutions</h3>
+          <div class="h2-heading title">Custom Software Solutions</div>
           <div class="desc">Get your desired product development services that can cater to your business. Transparental Solutions is a leading provider of end-to-end technology services. Contact us today for effective Custom Software Solutions.<br/>&nbsp;</div>
         </div>
       </div>
@@ -51,7 +68,7 @@
           <%= image_tag("it_staffing_services.jpg", alt: "it staffing services")%>
         </div>
         <div class="content-part">
-          <h3 class="title">IT Staffing & Services</h3>
+          <div class="h2-heading title">IT Staffing & Services</div>
           <div class="desc">Deliver excellence through our technology solutions and transform customer experiences. Hire excellent talents with our IT Staffing & Services. Take advantage of our global network. Through our consulting and expertise, you can stay on top of client needs.</div>
         </div>
       </div>
@@ -60,7 +77,7 @@
           <%= image_tag("managed_it_services.jpg", alt: "managed it services")%>
         </div>
         <div class="content-part">
-          <h3 class="title">Managed IT Services</h3>
+          <div class="h2-heading title">Managed IT Services</div>
           <div class="desc">Reduce your business's risk with our managed IT services. Let's help you grow your business by outsourcing your IT needs. Our experts will evaluate your current infrastructure and recommend the most efficient and beneficial plan for your business.</div>
         </div>
       </div>
@@ -104,7 +121,7 @@
             <div class="working-experiance">
               <div class="experience-year">
                 <div class="count-year plus"><span class="sub-text">25+</span></div>
-                <h4 class="title mb-0">Years Experience</h4>
+                <div class="title mb-0">Years Experience</div>
               </div>
             </div>
           </div> 
@@ -118,11 +135,10 @@
     <div class="container">
       <div class="sec-title2 text-center md-left mb-40">
         <h2 class="title mb-23">Why Choose Us</h2>
-        <h2 class="title hidden">Get our services &amp; drive more <br><span>customers.</span></h2>
         <p>Our highly committed team will help our clients to overcome the challenges in improving productivity and providing the highest quality of service such as custom software solutions, IT staffing &amp; services and managed it services.</p>
         <p>We build strong relationships with customers by enhancing every stage of their efficiency campaign.Our clients are pleased with our services and we always win 100% customer satisfaction.</p>
         <br>
-        <h4><span style="color:#ff9700;">Core Values:</span></h4>
+        <h3><span style="color:#ff9700;">Core Values:</span></h3>
         <p>The values that guide our thriving excellence are:</p>
       </div>
       <div class="row y-middle">
@@ -132,7 +148,7 @@
               <%= image_tag("customer-sucess.png", alt: "customer sucess") %>
             </div>
             <div class="services-text">
-              <h3 class="title">Enabling customer success</h3>
+              <div class="h2-heading title">Enabling customer success</div>
               <p class="services-txt"></p><ul><li> Focusing on customer satisfaction</li>
                 <li> Quality over quantity</li>
                 <li> Resolving client issues</li>
@@ -159,7 +175,7 @@
               <%= image_tag("experience.png", alt: "experience") %>
             </div>
             <div class="services-text">
-              <h3 class="title">Challenges</h3>
+              <div class="h2-heading title">Challenges</div>
               <p class="services-txt"></p><ul><li>Taking ownership of tasks</li>
                 <li>Upgrading our skills regularly</li>
                 <li>Striving for excellence</li>
@@ -188,7 +204,7 @@
                   </div>
                 </div>
                 <div class="content-part">
-                  <h5 class="title">Projects completed for our respected clients.</h5>
+                  <div class="title">Projects completed for our respected clients.</div>
                 </div>
               </div>
             </div>
@@ -204,7 +220,7 @@
                   </div>
                 </div>
                 <div class="content-part">
-                  <h5 class="title">Experienced people serving to clients.</h5>
+                  <div class="title">Experienced people serving to clients.</div>
                 </div>
               </div>
             </div>
@@ -220,7 +236,7 @@
                   </div>
                 </div>
                 <div class="content-part">
-                  <h5 class="title">Years experience in business &amp; consulting.</h5>
+                  <div class="title">Years experience in business &amp; consulting.</div>
                 </div>
               </div>
             </div>
@@ -236,7 +252,7 @@
                   </div>
                 </div>
                 <div class="content-part">
-                  <h5 class="title">Business &amp; consulting awards won over world.</h5>
+                  <div class="title">Business &amp; consulting awards won over world.</div>
                 </div>
               </div>
             </div>
@@ -269,7 +285,7 @@
           </div>
           <div class="project-content"> 
             <div class="project-inner">
-              <h3 class="title"><a>Strength solutions</a></h3>
+              <div class="title"><a>Strength solutions</a></div>
               <span class="category"><a>Investment</a></span>
             </div>
             <a class="p-icon"><i class="fa-long-arrow-right fa"></i></a>
@@ -281,7 +297,7 @@
           </div>
           <div class="project-content"> 
             <div class="project-inner">
-              <h3 class="title"><a>Business analytics</a></h3>
+              <div class="title"><a>Business analytics</a></div>
               <span class="category"><a>Business Strategy</a></span>
             </div>
             <a class="p-icon"><i class="fa-long-arrow-right fa"></i></a>
@@ -293,7 +309,7 @@
           </div>
           <div class="project-content"> 
             <div class="project-inner">
-              <h3 class="title"><a>Stock market analysis</a></h3>
+              <div class="title"><a>Stock market analysis</a></div>
               <span class="category"><a>Business Strategy</a></span>
             </div>
             <a class="p-icon"><i class="fa-long-arrow-right fa"></i></a>
@@ -305,7 +321,7 @@
           </div>
           <div class="project-content"> 
             <div class="project-inner">
-            <h3 class="title"><a>Sales analysis</a></h3>
+            <div class="title"><a>Sales analysis</a></div>
               <span class="category"><a>Financial</a></span>
             </div>
             <a class="p-icon"><i class="fa-long-arrow-right fa"></i></a>
@@ -317,7 +333,7 @@
           </div>
           <div class="project-content"> 
             <div class="project-inner">
-              <h3 class="title"><a>Stock investments</a></h3>
+              <div class="title"><a>Stock investments</a></div>
               <span class="category"><a>Tax Consulting</a></span>
             </div>
             <a class="p-icon"><i class="fa-long-arrow-right fa"></i></a>
@@ -355,7 +371,7 @@
                 <div class="number-area"> <span class="number-prefix"> 1 </span></div>
               </div>
               <div class="number-text">
-                <div class="number-title"><h3 class="title"> Discovery</h3></div>
+                <div class="number-title"><div class="title"> Discovery</div></div>
               </div>
             </div>
           </div>
@@ -368,7 +384,7 @@
                 <div class="number-area"> <span class="number-prefix"> 2 </span></div>
               </div>
               <div class="number-text">
-                <div class="number-title"><h3 class="title">Planning</h3></div>
+                <div class="number-title"><div class="title">Planning</div></div>
               </div>
             </div>
           </div>
@@ -381,7 +397,7 @@
                 <div class="number-area"> <span class="number-prefix"> 3 </span></div>
               </div>
               <div class="number-text">
-                <div class="number-title"><h3 class="title">Execute</h3></div>
+                <div class="number-title"><div class="title">Execute</div></div>
               </div>
             </div>
           </div>
@@ -394,7 +410,7 @@
                 <div class="number-area"> <span class="number-prefix"> 4 </span></div>
               </div>
               <div class="number-text">
-                <div class="number-title"><h3 class="title">Deliver</h3></div>
+                <div class="number-title"><div class="title">Deliver</div></div>
               </div>
             </div>
           </div>
