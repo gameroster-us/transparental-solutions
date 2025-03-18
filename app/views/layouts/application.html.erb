@@ -10,10 +10,11 @@
     <%= csp_meta_tag %>
     <%= yield :meta_tags %>
 
+    <%= favicon_link_tag 'favicon.ico', rel: 'icon', type: 'image/x-icon' %>
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <!-- Set Canonical URL -->
-    <link rel="canonical" href="<%= request.original_url %>">
+    <link rel="canonical" href="<%= request.base_url.chomp('/') + request.path.chomp('/') %>">
     
     <meta name="google-site-verification" content="EfaHMkq2HDwuI_gAd2GU4dryqb7ur6A48kWhisaxNfc" />
 
